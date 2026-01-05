@@ -20,3 +20,9 @@ jobs:
       
       - name: Run tests
         run: npm test
+
+#CD: Build and Deploy Job
+build-and-deply:
+needs:test 
+run-on: ubuntu-latest
+if : github.event.pull_requset.merged ==fales
